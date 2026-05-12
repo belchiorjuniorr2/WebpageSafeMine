@@ -1,23 +1,23 @@
-import { Zap, Wand2, Languages } from "lucide-react";
+import { Clock, Wand2, Brain } from "lucide-react";
 
 const stats = [
   {
-    value: "5x",
-    label: "mais rápido",
-    desc: "que digitar formulários no celular em campo, mesmo com EPI.",
-    Icon: Zap,
+    value: "Zero",
+    label: "papel no fluxo",
+    desc: "O relato sai do campo e chega na sala de segurança em segundos — sem folha, sem reDigitação, sem perda.",
+    Icon: Clock,
   },
   {
     value: "90%",
     label: "preenchido por IA",
-    desc: "dos campos extraídos automaticamente da fala — você só revisa.",
+    desc: "Os campos são extraídos automaticamente da fala. O operador só revisa e confirma.",
     Icon: Wand2,
   },
   {
-    value: "100%",
-    label: "em português",
-    desc: "treinado para vocabulário de mineração, da NR-22 ao chão de mina.",
-    Icon: Languages,
+    value: "IA",
+    label: "recomenda a tratativa",
+    desc: "Além de transcrever, a IA já sugere ações corretivas e preventivas com base no risco identificado.",
+    Icon: Brain,
   },
 ];
 
@@ -37,11 +37,11 @@ export default function Benefits() {
             id="benefits-title"
             className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight"
           >
-            Mais relatos. Menos tempo perdido.
+            Do campo para a análise. Sem papel no meio do caminho.
           </h2>
           <p className="mt-4 text-lg text-white/70">
-            Quando registrar é fácil, todo mundo registra. E é aí que a
-            segurança da operação dá um salto.
+            Quando o dado chega em tempo real e já vem com recomendação da IA,
+            a equipe de segurança age — em vez de lançar planilha.
           </p>
         </div>
 

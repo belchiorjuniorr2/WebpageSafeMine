@@ -22,8 +22,8 @@ const steps = [
   },
   {
     n: "04",
-    title: "Gestão acompanha em tempo real",
-    desc: "Dashboard centralizado para auditoria, conformidade e análise de tendências.",
+    title: "IA recomenda a tratativa — gestão age",
+    desc: "O sistema já sugere ações corretivas com base no risco. Dashboard centralizado para auditoria, conformidade e análise de tendências — sem esperar o papel chegar.",
     Icon: BarChart3,
   },
 ];
@@ -44,11 +44,11 @@ export default function HowItWorks() {
             id="how-title"
             className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-safemine-text"
           >
-            Três toques. Um relato.
+            Do campo para a análise em segundos.
           </h2>
           <p className="mt-4 text-lg text-safemine-text-mid">
-            Do campo para o sistema sem digitar nada — a IA cuida do
-            preenchimento, você cuida da operação.
+            Sem papel, sem redigitação, sem dado perdido — a IA transcreve,
+            preenche e já recomenda a tratativa do risco.
           </p>
         </div>
 

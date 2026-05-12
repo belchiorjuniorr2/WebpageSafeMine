@@ -18,20 +18,22 @@ export default function Hero() {
           <div>
             <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-wider uppercase text-safemine-orange bg-safemine-orange/10 px-3 py-1.5 rounded-full">
               <Sparkles className="w-3.5 h-3.5" aria-hidden="true" />
-              Voz-primeiro para operações de mineração
+              Do campo direto para a análise — sem papel no meio
             </span>
 
             <h1
               id="hero-title"
               className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-safemine-text leading-[1.05]"
             >
-              Registre ocorrências de segurança{" "}
-              <span className="text-safemine-orange">falando</span>, não digitando.
+              O relato que fica no papel{" "}
+              <span className="text-safemine-orange">nunca vira ação.</span>
             </h1>
 
             <p className="mt-6 text-lg sm:text-xl text-safemine-text-mid max-w-xl leading-relaxed">
-              O SafeMine ouve seu relato em campo, transcreve com IA e preenche
-              o formulário automaticamente. Menos burocracia, mais segurança.
+              Na maioria das operações, ocorrências ainda são registradas no papel
+              — e levam dias para chegar na sala de segurança, quando chegam.
+              O SafeMine leva o relato do campo direto para o sistema, em segundos,
+              com IA que já recomenda a tratativa do risco.
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
