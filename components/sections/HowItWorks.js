@@ -1,29 +1,30 @@
-import { Mic, Sparkles, CheckCircle2, BarChart3 } from "lucide-react";
-import Placeholder from "../Placeholder";
+import { Radio, Brain, ClipboardCheck, BarChart3 } from "lucide-react";
+import Image from "next/image";
+import painelAnalise from "@/public/painel-analise.png";
 
 const steps = [
   {
     n: "01",
-    title: "Toque e fale",
-    desc: "Descreva a ocorrência em linguagem natural, em português, mesmo com EPI e ruído de campo.",
-    Icon: Mic,
+    title: "O operador fala no rádio",
+    desc: "Em linguagem natural, em português, no rádio digital que já usa — mesmo com EPI e ruído de campo. Nada novo para aprender.",
+    Icon: Radio,
   },
   {
     n: "02",
-    title: "IA preenche o formulário",
-    desc: "Claude Haiku 4.5 transcreve a fala e estrutura todos os campos automaticamente.",
-    Icon: Sparkles,
+    title: "A IA transcreve e estrutura",
+    desc: "No servidor, o áudio é transcrito e um agente de IA especializado classifica e preenche todos os campos do relato como um técnico de segurança faria.",
+    Icon: Brain,
   },
   {
     n: "03",
-    title: "Você revisa e envia",
-    desc: "Confere os dados, anexa fotos como evidência e finaliza o registro em segundos.",
-    Icon: CheckCircle2,
+    title: "O relato chega pronto",
+    desc: "Estruturado e sem erro de transcrição, ele entra direto no sistema da empresa — o líder é notificado e acompanha pelo painel, sem repasse de papel.",
+    Icon: ClipboardCheck,
   },
   {
     n: "04",
-    title: "IA recomenda a tratativa — gestão age",
-    desc: "O sistema já sugere ações corretivas com base no risco. Dashboard centralizado para auditoria, conformidade e análise de tendências — sem esperar o papel chegar.",
+    title: "A segurança valida e trata — gestão age",
+    desc: "A equipe só valida e dá a tratativa: marca como resolvido ou abre um plano de ação. Painel centralizado para auditoria, conformidade e análise de tendências.",
     Icon: BarChart3,
   },
 ];
@@ -44,11 +45,12 @@ export default function HowItWorks() {
             id="how-title"
             className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-safemine-text"
           >
-            Do campo para a análise em segundos.
+            Do rádio para o seu sistema em segundos.
           </h2>
           <p className="mt-4 text-lg text-safemine-text-mid">
-            Sem papel, sem redigitação, sem dado perdido — a IA transcreve,
-            preenche e já recomenda a tratativa do risco.
+            Sem papel, sem redigitação, sem dado perdido — o operador fala no
+            rádio e a IA transcreve, estrutura e entrega o relato pronto para
+            tratativa.
           </p>
         </div>
 
@@ -83,10 +85,11 @@ export default function HowItWorks() {
           </ol>
 
           <div className="lg:sticky lg:top-24">
-            <Placeholder
-              label="Dashboard com formulário pré-preenchido"
-              aspect="4/3"
-              className="w-full"
+            <Image
+              src={painelAnalise}
+              alt="Painel de análise do SafeMine: relato preenchido com nome do colaborador, matrícula, turma, descrição, tratativa imediata e recomendações da IA, com ações de abrir plano de ação ou encerrar relato."
+              placeholder="blur"
+              className="w-full h-auto rounded-xl border border-safemine-border/60 shadow-[0_8px_24px_rgba(0,0,0,0.08)]"
             />
           </div>
         </div>

@@ -1,5 +1,4 @@
-import { Mic, ArrowRight, Sparkles } from "lucide-react";
-import Placeholder from "../Placeholder";
+import { Radio, Brain, CheckCircle2, ArrowRight, ArrowDown, AudioLines } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -17,23 +16,26 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div>
             <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-wider uppercase text-safemine-orange bg-safemine-orange/10 px-3 py-1.5 rounded-full">
-              <Sparkles className="w-3.5 h-3.5" aria-hidden="true" />
-              Do campo direto para a análise — sem papel no meio
+              <Radio className="w-3.5 h-3.5" aria-hidden="true" />
+              O rádio que sua operação já usa
             </span>
 
             <h1
               id="hero-title"
               className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-safemine-text leading-[1.05]"
             >
-              O relato que fica no papel{" "}
-              <span className="text-safemine-orange">nunca vira ação.</span>
+              Do rádio do operador{" "}
+              <span className="text-safemine-orange">
+                direto para o sistema que você já usa.
+              </span>
             </h1>
 
             <p className="mt-6 text-lg sm:text-xl text-safemine-text-mid max-w-xl leading-relaxed">
-              Na maioria das operações, ocorrências ainda são registradas no papel
-              — e levam dias para chegar na sala de segurança, quando chegam.
-              O SafeMine leva o relato do campo direto para o sistema, em segundos,
-              com IA que já recomenda a tratativa do risco.
+              O operador fala no rádio — sem app, sem papel, sem mudar a rotina.
+              Um agente de IA transcreve, estrutura e entrega o relato pronto
+              para tratativa no seu sistema. Em uma mineradora de grande porte,
+              cada relato saiu de{" "}
+              <strong className="text-safemine-text">30 minutos para 30 segundos</strong>.
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
@@ -52,34 +54,75 @@ export default function Hero() {
               </a>
             </div>
 
-            <div className="mt-8 flex items-center gap-4 text-sm text-safemine-muted">
-              <div className="flex -space-x-2" aria-hidden="true">
-                <span className="w-8 h-8 rounded-full bg-mod-safety border-2 border-white" />
-                <span className="w-8 h-8 rounded-full bg-mod-env border-2 border-white" />
-                <span className="w-8 h-8 rounded-full bg-mod-vehicle border-2 border-white" />
-                <span className="w-8 h-8 rounded-full bg-mod-shift border-2 border-white" />
-              </div>
-              <span>6 módulos de relato cobrindo toda a operação</span>
-            </div>
+            <p className="mt-6 text-sm text-safemine-muted">
+              Integra com o sistema de gestão que sua operação já usa.
+            </p>
           </div>
 
           <div className="relative">
-            <div className="mx-auto w-full max-w-[280px] sm:max-w-xs">
-              <div className="rounded-[2.5rem] border-[10px] border-safemine-dark bg-safemine-dark shadow-2xl">
-                <Placeholder
-                  label="App gravando voz"
-                  aspect="9/19.5"
-                  className="rounded-[1.5rem] border-0 bg-white"
-                />
-              </div>
-              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 bg-safemine-orange text-white px-4 py-2.5 rounded-full shadow-lg text-sm font-semibold">
-                <Mic className="w-4 h-4" aria-hidden="true" />
-                Gravando…
-              </div>
-            </div>
+            <RadioFlow />
           </div>
         </div>
       </div>
     </section>
+  );
+}
+
+function RadioFlow() {
+  const steps = [
+    {
+      Icon: Radio,
+      label: "Operador fala no rádio",
+      sub: "Sem app, sem papel — o rádio digital que já está na operação.",
+    },
+    {
+      Icon: Brain,
+      label: "Agente de IA processa",
+      sub: "Transcreve, estrutura e classifica como um especialista de segurança.",
+    },
+    {
+      Icon: CheckCircle2,
+      label: "Relato pronto no seu sistema",
+      sub: "Entregue para tratativa — em segundos, sem repasse manual.",
+    },
+  ];
+
+  return (
+    <div className="mx-auto w-full max-w-sm">
+      <div className="rounded-3xl border border-safemine-border/60 bg-white shadow-2xl p-5 sm:p-6">
+        <div className="flex items-center gap-2 text-xs font-semibold text-safemine-orange">
+          <AudioLines className="w-4 h-4" aria-hidden="true" />
+          No ar — transmissão capturada
+        </div>
+
+        <ol className="mt-4 space-y-3">
+          {steps.map(({ Icon, label, sub }, i) => (
+            <li key={label}>
+              <div className="flex gap-4 items-start rounded-2xl bg-safemine-bg p-4">
+                <div
+                  className="flex items-center justify-center w-11 h-11 rounded-xl bg-safemine-orange/10 text-safemine-orange shrink-0"
+                  aria-hidden="true"
+                >
+                  <Icon className="w-5 h-5" />
+                </div>
+                <div>
+                  <p className="font-semibold text-safemine-text leading-snug">
+                    {label}
+                  </p>
+                  <p className="mt-1 text-sm text-safemine-text-mid leading-relaxed">
+                    {sub}
+                  </p>
+                </div>
+              </div>
+              {i < steps.length - 1 && (
+                <div className="flex justify-center py-1" aria-hidden="true">
+                  <ArrowDown className="w-4 h-4 text-safemine-muted" />
+                </div>
+              )}
+            </li>
+          ))}
+        </ol>
+      </div>
+    </div>
   );
 }

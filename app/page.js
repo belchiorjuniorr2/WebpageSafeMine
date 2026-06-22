@@ -1,8 +1,12 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Hero from "@/components/sections/Hero";
-import Modules from "@/components/sections/Modules";
+import Problema from "@/components/sections/Problema";
+import Case from "@/components/sections/Case";
 import HowItWorks from "@/components/sections/HowItWorks";
+import Radio from "@/components/sections/Radio";
+import Modules from "@/components/sections/Modules";
+import AppChannel from "@/components/sections/AppChannel";
 import Benefits from "@/components/sections/Benefits";
 import Demo from "@/components/sections/Demo";
 
@@ -12,8 +16,12 @@ export default function HomePage() {
       <Navbar />
       <main className="flex-1">
         <Hero />
-        <Modules />
+        <Problema />
+        <Case />
         <HowItWorks />
+        <Radio />
+        <Modules />
+        <AppChannel />
         <Benefits />
         <Demo />
       </main>
