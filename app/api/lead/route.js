@@ -78,12 +78,20 @@ export async function POST(request) {
 
   const resend = new Resend(apiKey);
 
+  const canalLabels = {
+    radio_digital: "Rádio digital",
+    radio_analogico: "Rádio analógico",
+    celular_app: "Celular / app",
+    nao_sei: "Não sei",
+  };
+
   const rows = [
     ["Nome", payload.nome],
     ["Empresa", payload.empresa],
     ["Cargo", payload.cargo],
     ["Email", payload.email],
     ["Telefone", payload.telefone],
+    ["Canal em campo", canalLabels[payload.canal] || "—"],
     ["Mensagem", payload.mensagem || "—"],
   ]
     .map(

@@ -8,9 +8,9 @@ const stats = [
     Icon: Clock,
   },
   {
-    value: "90%",
+    value: "100%",
     label: "preenchido por IA",
-    desc: "Os campos são extraídos automaticamente da fala. O operador só revisa e confirma.",
+    desc: "Os campos do relato são extraídos automaticamente da fala — ninguém digita formulário.",
     Icon: Wand2,
   },
   {

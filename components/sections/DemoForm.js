@@ -9,6 +9,7 @@ const initialState = {
   cargo: "",
   email: "",
   telefone: "",
+  canal: "",
   mensagem: "",
 };
 
@@ -18,8 +19,16 @@ const fieldLabels = {
   cargo: "Cargo",
   email: "Email corporativo",
   telefone: "Telefone (com DDD)",
+  canal: "Como sua operação se comunica em campo?",
   mensagem: "Conte-nos sobre sua operação (opcional)",
 };
+
+const canalOptions = [
+  { value: "radio_digital", label: "Rádio digital" },
+  { value: "radio_analogico", label: "Rádio analógico" },
+  { value: "celular_app", label: "Celular / app" },
+  { value: "nao_sei", label: "Não sei" },
+];
 
 function validate(data) {
   const errors = {};
@@ -156,7 +165,12 @@ export default function DemoForm() {
           error={errors.telefone}
           onChange={update}
           autoComplete="tel"
-          className="sm:col-span-2"
+        />
+        <SelectField
+          name="canal"
+          value={data.canal}
+          options={canalOptions}
+          onChange={update}
         />
         <Field
           name="mensagem"
@@ -243,6 +257,34 @@ function Field({
           {error}
         </p>
       )}
+    </div>
+  );
+}
+
+function SelectField({ name, value, options, onChange, className = "" }) {
+  const id = `field-${name}`;
+  return (
+    <div className={className}>
+      <label
+        htmlFor={id}
+        className="block text-sm font-medium text-safemine-text"
+      >
+        {fieldLabels[name]}
+      </label>
+      <select
+        id={id}
+        name={name}
+        value={value}
+        onChange={(e) => onChange(name, e.target.value)}
+        className="mt-1.5 block w-full rounded-lg border border-safemine-border bg-white px-3.5 py-2.5 text-base text-safemine-text focus:outline-none focus:ring-2 focus:ring-safemine-orange/30 focus:border-safemine-orange transition-colors"
+      >
+        <option value="">Selecione…</option>
+        {options.map(({ value: v, label }) => (
+          <option key={v} value={v}>
+            {label}
+          </option>
+        ))}
+      </select>
     </div>
   );
 }

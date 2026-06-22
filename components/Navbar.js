@@ -13,8 +13,8 @@ export default function Navbar() {
 
         <ul className="hidden md:flex items-center gap-8 text-sm font-medium text-safemine-text-mid">
           <li>
-            <a href="#modules" className="hover:text-safemine-text transition-colors">
-              Módulos
+            <a href="#case" className="hover:text-safemine-text transition-colors">
+              Resultado
             </a>
           </li>
           <li>
@@ -23,8 +23,13 @@ export default function Navbar() {
             </a>
           </li>
           <li>
-            <a href="#benefits" className="hover:text-safemine-text transition-colors">
-              Benefícios
+            <a href="#radio" className="hover:text-safemine-text transition-colors">
+              Por que rádio
+            </a>
+          </li>
+          <li>
+            <a href="#modules" className="hover:text-safemine-text transition-colors">
+              Módulos
             </a>
           </li>
         </ul>
