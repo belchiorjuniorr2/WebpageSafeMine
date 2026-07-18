@@ -9,7 +9,7 @@ const channels = [
     title: "No adm da mina, pelo celular",
     desc: "A equipe de segurança ou supervisão grava o relato no app SafeMine — no escritório, com o dashboard ao lado e o celular na mão.",
     image: "/images/admin-phone.jpg",
-    alt: "Profissional da administração da mina registrando relato por voz no celular SafeMine, com monitores de operação ao fundo",
+    alt: "Profissional da administração da mina registrando relato no app SafeMine no celular, com botão de gravação por voz e monitores de operação ao fundo",
     points: [
       "App web mobile, sem instalar nada extra",
       "Perfil do colaborador já preenchido",
