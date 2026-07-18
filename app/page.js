@@ -4,7 +4,6 @@ import Hero from "@/components/sections/Hero";
 import Problema from "@/components/sections/Problema";
 import Case from "@/components/sections/Case";
 import HowItWorks from "@/components/sections/HowItWorks";
-import Radio from "@/components/sections/Radio";
 import Modules from "@/components/sections/Modules";
 import AppChannel from "@/components/sections/AppChannel";
 import Benefits from "@/components/sections/Benefits";
@@ -19,7 +18,6 @@ export default function HomePage() {
         <Problema />
         <Case />
         <HowItWorks />
-        <Radio />
         <Modules />
         <AppChannel />
         <Benefits />

@@ -4,27 +4,30 @@ import "./globals.css";
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata = {
-  metadataBase: new URL("https://safemine.com.br"),
+  metadataBase: new URL("https://minevoice-landingpage.vercel.app"),
   title: "SafeMine — Segurança em Campo por Voz",
   description:
-    "Registre ocorrências de segurança em mineração falando. A IA preenche o formulário, você revisa e envia. Menos burocracia, mais segurança.",
+    "App de relatos por voz para mineração a céu aberto. A IA transcreve, preenche formulários de segurança, ambiental, ergonomia, veículo, turno e inspeção — e notifica a SSMA por e-mail.",
   openGraph: {
     title: "SafeMine — Segurança em Campo por Voz",
     description:
-      "Plataforma voice-first para registro de ocorrências em operações de mineração.",
+      "Do campo para a SSMA em segundos: voz, IA e 6 módulos de relato para mina a céu aberto.",
     locale: "pt_BR",
     type: "website",
-    images: ["/og-image.png"],
+    images: ["/images/hero.jpg"],
   },
   twitter: {
     card: "summary_large_image",
     title: "SafeMine — Segurança em Campo por Voz",
     description:
-      "Plataforma voice-first para registro de ocorrências em operações de mineração.",
+      "App voice-first de relatos para operações de mineração a céu aberto.",
+  },
+  icons: {
+    icon: "/icons/logo.png",
   },
 };
 

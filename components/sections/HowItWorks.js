@@ -1,69 +1,63 @@
-import { Radio, Brain, ClipboardCheck, BarChart3 } from "lucide-react";
 import Image from "next/image";
-import painelAnalise from "@/public/painel-analise.png";
+import { Mic, Brain, UserRound, Mail } from "lucide-react";
 
 const steps = [
   {
     n: "01",
-    title: "O operador fala no rádio",
-    desc: "Em linguagem natural, em português, no rádio digital que já usa — mesmo com EPI e ruído de campo. Nada novo para aprender.",
-    Icon: Radio,
+    title: "O operador grava por voz",
+    desc: "No app SafeMine, fala o relato em português — com microfone, mesmo em campo e com EPI. Toque para gravar, toque para parar.",
+    Icon: Mic,
   },
   {
     n: "02",
-    title: "A IA transcreve e estrutura",
-    desc: "No servidor, o áudio é transcrito e um agente de IA especializado classifica e preenche todos os campos do relato como um técnico de segurança faria.",
+    title: "A IA transcreve e preenche",
+    desc: "Transcrição com contexto de mina a céu aberto e extração automática dos campos do formulário — sem inventar dados de perfil.",
     Icon: Brain,
   },
   {
     n: "03",
-    title: "O relato chega pronto",
-    desc: "Estruturado e sem erro de transcrição, ele entra direto no sistema da empresa — o líder é notificado e acompanha pelo painel, sem repasse de papel.",
-    Icon: ClipboardCheck,
+    title: "Identificação e revisão",
+    desc: "Nome, matrícula e função vêm do perfil do colaborador. O operador confere o texto, o áudio e os campos antes de enviar.",
+    Icon: UserRound,
   },
   {
     n: "04",
-    title: "A segurança valida e trata — gestão age",
-    desc: "A equipe só valida e dá a tratativa: marca como resolvido ou abre um plano de ação. Painel centralizado para auditoria, conformidade e análise de tendências.",
-    Icon: BarChart3,
+    title: "SSMA recebe e trata",
+    desc: "O registro fica na base e um e-mail HTML estruturado chega para a equipe de segurança analisar e dar a tratativa.",
+    Icon: Mail,
   },
 ];
 
 export default function HowItWorks() {
   return (
-    <section
-      id="how"
-      aria-labelledby="how-title"
-      className="py-20 lg:py-28"
-    >
+    <section id="how" aria-labelledby="how-title" className="py-20 lg:py-28 bg-safemine-bg">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="max-w-2xl">
+        <div className="max-w-2xl animate-fade-up">
           <span className="text-xs font-semibold tracking-wider uppercase text-safemine-orange">
             Como funciona
           </span>
           <h2
             id="how-title"
-            className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-safemine-text"
+            className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-safemine-dark"
           >
-            Do rádio para o seu sistema em segundos.
+            Do campo para a SSMA em quatro passos.
           </h2>
           <p className="mt-4 text-lg text-safemine-text-mid">
-            Sem papel, sem redigitação, sem dado perdido — o operador fala no
-            rádio e a IA transcreve, estrutura e entrega o relato pronto para
-            tratativa.
+            O mesmo fluxo do app SafeMine em produção: voz → transcrição → formulário estruturado →
+            notificação por e-mail.
           </p>
         </div>
 
         <div className="mt-12 grid lg:grid-cols-2 gap-12 items-start">
-          <ol className="space-y-6">
-            {steps.map(({ n, title, desc, Icon }) => (
+          <ol className="space-y-4">
+            {steps.map(({ n, title, desc, Icon }, i) => (
               <li
                 key={n}
-                className="flex gap-5 bg-white rounded-2xl p-5 border border-safemine-border/60"
+                className={`card-hover flex gap-5 bg-white rounded-2xl p-5 border border-safemine-border/80 shadow-[0_2px_12px_rgba(74,85,104,0.04)] animate-fade-up delay-${(i + 1) * 100}`}
               >
                 <div className="flex flex-col items-center shrink-0">
                   <div
-                    className="flex items-center justify-center w-12 h-12 rounded-xl bg-safemine-orange/10 text-safemine-orange"
+                    className="flex items-center justify-center w-12 h-12 rounded-xl bg-safemine-orange-soft text-safemine-orange"
                     aria-hidden="true"
                   >
                     <Icon className="w-6 h-6" />
@@ -73,24 +67,32 @@ export default function HowItWorks() {
                   </span>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-safemine-text">
-                    {title}
-                  </h3>
-                  <p className="mt-1.5 text-safemine-text-mid leading-relaxed">
-                    {desc}
-                  </p>
+                  <h3 className="text-lg font-semibold text-safemine-dark">{title}</h3>
+                  <p className="mt-1.5 text-safemine-text-mid leading-relaxed">{desc}</p>
                 </div>
               </li>
             ))}
           </ol>
 
-          <div className="lg:sticky lg:top-24">
-            <Image
-              src={painelAnalise}
-              alt="Painel de análise do SafeMine: relato preenchido com nome do colaborador, matrícula, turma, descrição, tratativa imediata e recomendações da IA, com ações de abrir plano de ação ou encerrar relato."
-              placeholder="blur"
-              className="w-full h-auto rounded-xl border border-safemine-border/60 shadow-[0_8px_24px_rgba(0,0,0,0.08)]"
-            />
+          <div className="lg:sticky lg:top-24 space-y-5 animate-fade-up delay-200">
+            <div className="group relative overflow-hidden rounded-2xl border border-safemine-border/80 shadow-[0_12px_32px_rgba(74,85,104,0.08)]">
+              <Image
+                src="/images/ai-process.jpg"
+                alt="Ilustração da IA transformando voz em relato estruturado"
+                width={900}
+                height={900}
+                className="w-full h-auto object-cover img-zoom"
+              />
+            </div>
+            <div className="group relative overflow-hidden rounded-2xl border border-safemine-border/80 shadow-[0_12px_32px_rgba(74,85,104,0.08)]">
+              <Image
+                src="/images/dashboard.jpg"
+                alt="Equipe de segurança analisando relatos no painel SafeMine"
+                width={1200}
+                height={675}
+                className="w-full h-auto object-cover img-zoom"
+              />
+            </div>
           </div>
         </div>
       </div>

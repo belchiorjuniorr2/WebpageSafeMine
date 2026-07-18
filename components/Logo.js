@@ -1,18 +1,22 @@
-import { ShieldAlert } from "lucide-react";
+import Image from "next/image";
 
 export default function Logo({ showTagline = false, dark = false }) {
   return (
     <div className="flex items-center gap-3">
-      <div
-        aria-label="SafeMine"
-        className="flex items-center justify-center w-10 h-10 rounded-xl bg-safemine-orange shadow-sm shrink-0"
-      >
-        <ShieldAlert className="w-6 h-6 text-white" aria-hidden="true" />
+      <div className="relative w-10 h-10 shrink-0">
+        <Image
+          src="/icons/logo.png"
+          alt="SafeMine"
+          width={40}
+          height={40}
+          className="object-contain drop-shadow-sm"
+          priority
+        />
       </div>
       <div className="flex flex-col leading-tight">
         <span
           className={`font-bold text-lg tracking-tight ${
-            dark ? "text-white" : "text-safemine-text"
+            dark ? "text-white" : "text-safemine-dark"
           }`}
         >
           SafeMine

@@ -34,13 +34,13 @@ export default function Demo() {
             </span>
             <h2
               id="demo-title"
-              className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-safemine-text"
+              className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-safemine-dark"
             >
-              Veja o SafeMine na sua operação.
+              Veja o SafeMine na sua mina.
             </h2>
             <p className="mt-4 text-lg text-safemine-text-mid">
-              Agende uma demonstração com nossa equipe. Mostramos o produto com
-              cenários reais do seu setor.
+              Agende uma demo e mostre à SSMA o fluxo real: gravação por voz, 6 módulos,
+              perfil do colaborador e e-mail automático do relato.
             </p>
 
             <ul className="mt-8 space-y-4">

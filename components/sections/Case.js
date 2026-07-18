@@ -1,72 +1,41 @@
-import { Timer, UserCheck, Database } from "lucide-react";
-
-const metrics = [
-  {
-    value: "30 min → 30 s",
-    label: "por relato",
-    desc: "O tempo de emissão de cada relato caiu de meia hora para meio minuto.",
-    Icon: Timer,
-  },
-  {
-    value: "0",
-    label: "papel no repasse do líder",
-    desc: "O elo manual do líder de turma deixou de existir — ele só é notificado e acompanha pelo painel.",
-    Icon: UserCheck,
-  },
-  {
-    value: "600+",
-    label: "relatos tratados por mês",
-    desc: "Mais de 20 relatos por dia chegam prontos: a segurança valida e dá a tratativa, sem redigitar.",
-    Icon: Database,
-  },
-];
+import { Quote } from "lucide-react";
 
 export default function Case() {
   return (
-    <section
-      id="case"
-      aria-labelledby="case-title"
-      className="bg-safemine-dark text-white py-20 lg:py-28"
-    >
+    <section id="case" aria-labelledby="case-title" className="py-16 lg:py-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="max-w-2xl">
-          <span className="text-xs font-semibold tracking-wider uppercase text-safemine-orange">
-            Resultado real
-          </span>
-          <h2
-            id="case-title"
-            className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight"
-          >
-            Em uma mineradora de grande porte.
+        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-safemine-orange to-[#E84E0A] p-8 sm:p-12 text-white shadow-[0_20px_50px_rgba(255,94,20,0.28)] animate-fade-up">
+          <div
+            aria-hidden
+            className="absolute -right-10 -top-10 w-48 h-48 rounded-full bg-white/10 blur-2xl"
+          />
+          <Quote className="w-10 h-10 text-white/40" aria-hidden />
+          <h2 id="case-title" className="sr-only">
+            Resultado esperado
           </h2>
-          <p className="mt-4 text-lg text-white/70">
-            Operação já rodando com o SafeMine no rádio. Os números abaixo são
-            desse cliente — o nome é confidencial, os resultados não.
+          <p className="mt-4 text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-snug max-w-3xl">
+            De dezenas de minutos por relato no papel para segundos falando no app —
+            com o dado chegando estruturado à SSMA.
           </p>
+          <p className="mt-5 text-white/85 text-base sm:text-lg max-w-2xl leading-relaxed">
+            O SafeMine elimina a cadeia operador → papel → líder → redigitação. O colaborador fala,
+            a IA preenche, a segurança recebe e trata.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-6 text-sm font-semibold">
+            <div>
+              <div className="text-3xl font-bold">6</div>
+              <div className="text-white/80">módulos de campo</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold">1</div>
+              <div className="text-white/80">toque para gravar</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold">0</div>
+              <div className="text-white/80">papel no fluxo</div>
+            </div>
+          </div>
         </div>
-
-        <ul className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-5">
-          {metrics.map(({ value, label, desc, Icon }) => (
-            <li
-              key={label}
-              className="bg-white/5 border border-white/10 rounded-2xl p-7 backdrop-blur"
-            >
-              <div
-                className="flex items-center justify-center w-11 h-11 rounded-xl bg-safemine-orange/15 text-safemine-orange"
-                aria-hidden="true"
-              >
-                <Icon className="w-5 h-5" />
-              </div>
-              <p className="mt-5 text-4xl font-bold tracking-tight text-white">
-                {value}
-              </p>
-              <p className="mt-1 text-base font-semibold text-safemine-orange">
-                {label}
-              </p>
-              <p className="mt-3 text-white/70 leading-relaxed">{desc}</p>
-            </li>
-          ))}
-        </ul>
       </div>
     </section>
   );
