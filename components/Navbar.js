@@ -28,6 +28,11 @@ export default function Navbar() {
             </a>
           </li>
           <li>
+            <a href="#canais" className="hover:text-safemine-orange transition-colors">
+              Canais
+            </a>
+          </li>
+          <li>
             <a href="#app" className="hover:text-safemine-orange transition-colors">
               App
             </a>

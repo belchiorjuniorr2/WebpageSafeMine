@@ -5,6 +5,7 @@ import Problema from "@/components/sections/Problema";
 import Case from "@/components/sections/Case";
 import HowItWorks from "@/components/sections/HowItWorks";
 import Modules from "@/components/sections/Modules";
+import DualChannels from "@/components/sections/DualChannels";
 import AppChannel from "@/components/sections/AppChannel";
 import Benefits from "@/components/sections/Benefits";
 import Demo from "@/components/sections/Demo";
@@ -19,6 +20,7 @@ export default function HomePage() {
         <Case />
         <HowItWorks />
         <Modules />
+        <DualChannels />
         <AppChannel />
         <Benefits />
         <Demo />
