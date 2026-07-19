@@ -5,7 +5,7 @@ const steps = [
   {
     n: "01",
     title: "O operador grava por voz",
-    desc: "No app SafeMine, fala o relato em português — com microfone, mesmo em campo e com EPI. Toque para gravar, toque para parar.",
+    desc: "No app SafeMine ou por áudio no WhatsApp — fala o relato em português, mesmo em campo e com EPI. Toque para gravar, toque para parar.",
     Icon: Mic,
   },
   {
@@ -43,7 +43,7 @@ export default function HowItWorks() {
             Do campo para a SSMA em quatro passos.
           </h2>
           <p className="mt-4 text-lg text-safemine-text-mid">
-            O mesmo fluxo do app SafeMine em produção: voz → transcrição → formulário estruturado →
+            O mesmo fluxo em produção — app ou WhatsApp: voz → transcrição → formulário estruturado →
             notificação por e-mail.
           </p>
         </div>

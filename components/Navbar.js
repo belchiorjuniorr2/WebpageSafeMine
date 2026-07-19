@@ -33,6 +33,11 @@ export default function Navbar() {
             </a>
           </li>
           <li>
+            <a href="#whatsapp" className="hover:text-safemine-orange transition-colors">
+              WhatsApp
+            </a>
+          </li>
+          <li>
             <a href="#app" className="hover:text-safemine-orange transition-colors">
               App
             </a>

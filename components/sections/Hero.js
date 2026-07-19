@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Mic, Brain, CheckCircle2, ArrowRight, Sparkles } from "lucide-react";
+import { Mic, Brain, CheckCircle2, ArrowRight, Sparkles, MessageCircle } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -14,7 +14,7 @@ export default function Hero() {
           <div className="animate-fade-up">
             <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-wider uppercase text-safemine-orange bg-safemine-orange-soft px-3 py-1.5 rounded-full border border-[#FFE4D0]">
               <Mic className="w-3.5 h-3.5" aria-hidden="true" />
-              App de relatos por voz · Mina a céu aberto
+              App · WhatsApp · Mina a céu aberto
             </span>
 
             <h1
@@ -28,7 +28,9 @@ export default function Hero() {
             <p className="mt-6 text-lg sm:text-xl text-safemine-text-mid max-w-xl leading-relaxed">
               O <strong className="text-safemine-dark">SafeMine</strong> transforma a voz do campo em
               registros estruturados de segurança, ambiental, ergonomia, veículo, turno e inspeção —
-              com transcrição inteligente, perfil do colaborador e e-mail automático para a SSMA.
+              pelo <strong className="text-safemine-dark">app</strong> ou pelo{" "}
+              <strong className="text-safemine-dark">WhatsApp</strong>, com transcrição inteligente e
+              e-mail automático para a SSMA.
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
@@ -40,10 +42,11 @@ export default function Hero() {
                 <ArrowRight className="w-4 h-4" aria-hidden="true" />
               </a>
               <a
-                href="#how"
-                className="inline-flex items-center justify-center gap-2 bg-white text-safemine-dark text-base font-semibold px-6 py-3.5 rounded-xl border border-safemine-border hover:border-safemine-orange/40 hover:bg-safemine-orange-soft/40 transition-all"
+                href="#whatsapp"
+                className="inline-flex items-center justify-center gap-2 bg-white text-safemine-dark text-base font-semibold px-6 py-3.5 rounded-xl border border-safemine-border hover:border-emerald-400/50 hover:bg-emerald-50/50 transition-all"
               >
-                Ver como funciona
+                <MessageCircle className="w-4 h-4 text-emerald-600" />
+                Ver WhatsApp
               </a>
             </div>
 
@@ -52,10 +55,10 @@ export default function Hero() {
                 <Sparkles className="w-3.5 h-3.5 text-safemine-orange" /> 6 módulos de relato
               </li>
               <li className="flex items-center gap-1.5">
-                <Sparkles className="w-3.5 h-3.5 text-safemine-orange" /> Áudio + transcrição
+                <Sparkles className="w-3.5 h-3.5 text-safemine-orange" /> App + WhatsApp
               </li>
               <li className="flex items-center gap-1.5">
-                <Sparkles className="w-3.5 h-3.5 text-safemine-orange" /> E-mail para a segurança
+                <Sparkles className="w-3.5 h-3.5 text-safemine-orange" /> E-mail para a SSMA
               </li>
             </ul>
           </div>

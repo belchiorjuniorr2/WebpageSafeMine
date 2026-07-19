@@ -3,10 +3,10 @@ import { Clock, Wand2, ShieldCheck, Mail } from "lucide-react";
 const stats = [
   {
     value: "Voz",
-    label: "em vez de papel",
-    desc: "O operador relata falando. Menos tempo parado na frente de lavra e mais relatos que realmente chegam.",
+    label: "app ou WhatsApp",
+    desc: "O operador relata falando no app ou manda áudio no WhatsApp. Menos papel e mais relatos que realmente chegam.",
     Icon: Clock,
-  },
+  }
   {
     value: "IA",
     label: "preenche o formulário",
