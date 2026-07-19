@@ -29,12 +29,7 @@ export default function Navbar() {
           </li>
           <li>
             <a href="#canais" className="hover:text-safemine-orange transition-colors">
-              Canais
-            </a>
-          </li>
-          <li>
-            <a href="#whatsapp" className="hover:text-safemine-orange transition-colors">
-              WhatsApp
+              3 formas
             </a>
           </li>
           <li>

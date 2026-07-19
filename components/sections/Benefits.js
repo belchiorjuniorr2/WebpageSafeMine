@@ -4,7 +4,7 @@ const stats = [
   {
     value: "Voz",
     label: "app ou WhatsApp",
-    desc: "O operador relata falando no app ou manda áudio no WhatsApp. Menos papel e mais relatos que realmente chegam.",
+    desc: "App, WhatsApp ou rádio digital: o operador fala e o relato chega estruturado. Menos papel, mais relatos reais.",
     Icon: Clock,
   },
   {
