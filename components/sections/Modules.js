@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { modules } from "@/lib/modules";
+import TypeIcon from "@/components/TypeIcon";
 
 export default function Modules() {
   return (
@@ -22,19 +22,18 @@ export default function Modules() {
         </div>
 
         <ul className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {modules.map(({ id, title, blurb, icon, borderClass, glow }, i) => (
+          {modules.map(({ id, title, blurb, Icon, gradient, shadow, borderClass }, i) => (
             <li
               key={id}
               className={`group card-hover bg-white rounded-2xl p-6 border border-safemine-border/80 border-t-4 ${borderClass} shadow-[0_2px_12px_rgba(74,85,104,0.04)] animate-fade-up delay-${(i % 3) * 100 + 100}`}
-              style={{ boxShadow: `0 2px 12px rgba(74,85,104,0.04), 0 0 0 0 ${glow}` }}
             >
-              <div className="relative w-16 h-16 mx-auto sm:mx-0">
-                <Image
-                  src={icon}
-                  alt=""
-                  width={64}
-                  height={64}
-                  className="object-contain drop-shadow-md transition-transform duration-300 group-hover:scale-110 group-hover:-translate-y-1"
+              <div className="flex justify-center sm:justify-start">
+                <TypeIcon
+                  Icon={Icon}
+                  gradient={gradient}
+                  shadow={shadow}
+                  size={64}
+                  className="transition-transform duration-300 group-hover:scale-110 group-hover:-translate-y-1"
                 />
               </div>
               <h3 className="mt-5 text-xl font-semibold text-safemine-dark text-center sm:text-left">
