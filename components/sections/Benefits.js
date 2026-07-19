@@ -6,7 +6,7 @@ const stats = [
     label: "app ou WhatsApp",
     desc: "O operador relata falando no app ou manda áudio no WhatsApp. Menos papel e mais relatos que realmente chegam.",
     Icon: Clock,
-  }
+  },
   {
     value: "IA",
     label: "preenche o formulário",
